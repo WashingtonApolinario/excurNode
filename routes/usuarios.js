@@ -6,6 +6,7 @@ const knex = require('../db/knex');
 var scripts = [{ script: '/js/image.js' }];
 
 /* This router is mounted at /todo */
+//localhost:3000/usuarios/
 router.get('/', (req, res) => {
   knex('usuarios')
     .select()
@@ -14,6 +15,7 @@ router.get('/', (req, res) => {
     });
 });
 
+//localhost:3000/usuarios/agregar
 router.get('/agregar', (req, res) => {
   res.render('usuarios/agregar', {scripts: scripts});
 });
@@ -24,7 +26,7 @@ router.get('/:id', (req, res) => {
   console.log(id)
   respondAndRenderTodo(id, res, 'usuarios/ver');
 });
-
+//localhost:3000/usuarios/1/puntos
 router.get('/:id/puntos', (req, res) => {
 
   const id = req.params.id;
@@ -34,8 +36,6 @@ router.get('/:id/puntos', (req, res) => {
   .where('id', id).then((user)=>{
     res.json(user)
   });
-
-
   //respondAndRenderTodo(id, res, 'usuarios/ver');
 });
 
@@ -44,6 +44,7 @@ router.get('/:id/edit', (req, res) => {
   respondAndRenderTodo(id, res, 'usuarios/editar');
 });
 
+//localhost:3000/usuarios/
 router.post('/', (req, res) => {
   validateTodoRenderError(req, res, (usuario) => {
     

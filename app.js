@@ -14,6 +14,7 @@ var excursiones = require('./routes/excursiones');
 var capitulos = require('./routes/capitulos');
 var preguntas = require('./routes/preguntas');
 var iniciar = require('./routes/iniciar');
+var tareas = require('./routes/tareas');
 
 var login = require('./routes/login');
 var app = express();
@@ -55,6 +56,7 @@ app.use('/capitulos', capitulos);
 app.use('/preguntas', preguntas);
 app.use('/login', login);
 app.use('/iniciar', iniciar);
+app.use('/tareas', tareas);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

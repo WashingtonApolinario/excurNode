@@ -23,7 +23,7 @@ if(localStorage.getItem('usuario') == null || localStorage.getItem('usuario') ==
   <div class="form-group">
     <label for="priority">Rol</label>
     <select class="form-control" id="rol" name="rol">
-      {{#select usuario.rol}}
+      {{#select usuario.rol}}<!--rol: 'A' , 'N'-->
       <option value="A">Rol Administrador</option>
       <option value="N">Rol Niño</option>
       {{/select}}

@@ -51,6 +51,7 @@ router.get('/:id', (req, res)=>{
       });
 
 })
+/*
 router.get('/sesion', (req, res) => {
 
   console.log(req.body)
@@ -61,5 +62,5 @@ router.get('/sesion', (req, res) => {
 router.get('/agregar', (req, res) => {
   res.render('usuarios/agregar', {scripts: scripts});
 });
-
+*/
 module.exports = router;

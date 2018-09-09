@@ -12,11 +12,11 @@ if(localStorage.getItem('usuario') == null || localStorage.getItem('usuario') ==
 <form class="form" action="/usuarios" method="post">
   <div class="form-group">
     <label for="title">Nombre:</label>
-    <input type="text" class="form-control" id="nombre" placeholder="Nombre Completo" name="nombre">
+    <input type="text" class="form-control" id="nombre" placeholder="Nombre Completo" name="nombre"><!--req.body.name-->
   </div>
   <div class="form-group">
     <label for="title">Usuario:</label>
-    <input type="text" class="form-control" id="usuario" placeholder="Usuario" name="usuario">
+    <input type="text" class="form-control" id="usuario" placeholder="Usuario" name="usuario"><!--req.body.usuario-->
   </div>
   <div class="form-group">
     <label for="title">Clave:</label>
@@ -24,7 +24,7 @@ if(localStorage.getItem('usuario') == null || localStorage.getItem('usuario') ==
   </div>
   <div class="form-group">
     <label for="priority">Rol</label>
-    <select class="form-control" id="rol" name="rol">
+    <select class="form-control" id="rol" name="rol"><!--req.body.rol-->
       <option value="A">Rol Administrador</option>
       <option value="N">Rol Niño</option>
     </select>
